@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Raycasting</title>
+	<script src="./src/loader.js" type="module"></script>
+</head>
+<body>
+<canvas id=canvas1 width=640 height="480">
+    Get Good
+</canvas>
+
+<audio id="embeddedAudio" controls src="media/New Adventure Theme.mp3"></audio>
+<audio id="userAudio" controls></audio>
+
+
+<section>
+	<span><input type="checkbox" id="camera"><label for="CameraMove">Move Camera</label></span>
+	<span><input type="checkbox" id="drawRays"><label for="DrawRays">Draw Rays</label></span>
+	<span><input type="checkbox" id="drawNotes"><label for="DrawNotes">Draw Notes</label></span>
+	<span><input type="checkbox" id="drawDynamic"><label for="DrawDynamic">Draw Dynamic</label></span>
+	FOV<input type="range" id="fov" min="0" max="360" value="90" step="0.01">
+	<!--Ray Increm<input type="range" id="rayIncrem" min="0.01" max="10" value="0.1" step="0.01">-->
+	<!--<span><input type="checkbox" id="camera"><label for="CameraMove">Move Camera</label></span>-->
+	<section>
+		<h4>Preset Audio</h4>
+		Bass:<input type="range" id="bass" min="0" max="100" value="1" step="0.01">
+		Mid:<input type="range" id="mid" min="0" max="100" value="1" step="0.01">
+		Treble:<input type="range" id="treble" min="0" max="100" value="1" step="0.01">
+		Mute:<input type="range" id="highpass" min="0" max="24000" value="1" step="0.01">
+		Volume:<input type="range" id="volume" min="0" max="4" value="1" step="0.01">
+		Detune:<input type="range" id="detune" min="0" max="10000" value="1" step="0.01">
+		<!--Playbackrate:<input type="range" id="playbackrate" min="1" max="2" value="1" step="0.01">-->
+	</section>
+	<section>
+		<h4>User Audio<span><input type="checkbox" id="userAudiobox"><label for="EnableUserAudio"></label></span></h4>
+		Bass:<input type="range" id="userBass" min="0" max="100" value="1" step="0.01">
+		Mid:<input type="range" id="usermid" min="0" max="100" value="1" step="0.01">
+		Treble:<input type="range" id="usertreble" min="0" max="100" value="1" step="0.01">
+		Mute:<input type="range" id="userhighpass" min="0" max="24000" value="1" step="0.01">
+		Volume:<input type="range" id="uservolume" min="0" max="4" value="1" step="0.01">
+		Detune:<input type="range" id="userdetune" min="0" max="10000" value="0" step="0.01">
+	</section>
+	
+</section>
+</body>
+</html>
