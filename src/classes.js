@@ -8,9 +8,10 @@ import {ctx} from  "./index.js";
 let cutOffDistancePlaySound=350;
 
 class Boundary{
-    constructor(vecA,vecB){
+    constructor(vecA,vecB,height){
         this.a=vecA;
         this.b=vecB;
+        this.height=height;
     }
 
     draw(ctx)
@@ -149,7 +150,7 @@ class Camera
         this.pos=pos;
         this.rays=[];
         for(let i=-this.fov/2;i<this.fov;i+=this.rayIncrem){
-            let ang=i*(Math.PI/180); ;
+            let ang=i*(Math.PI/180);
             let dir=new edsLIB.Vector2((Math.sin(ang) +  Math.cos(ang)),(Math.cos(ang) - Math.sin(ang)));
             dir= edsLIB.normalize2D(dir);
             this.rays.push(new Ray2D(this.pos,dir));
@@ -166,6 +167,7 @@ class Camera
         {
             let closest=null;
             let record=Infinity;
+            let height=0;
             for(let bound of  bounds){
                 if(bound.noteInt!=0){//make sure not blank note
                     let pt=ray.cast(bound);
@@ -173,6 +175,7 @@ class Camera
                         let d= edsLIB.distanceBetweenVectors(this.pos,pt);
                         if(record>d){
                             record=d;
+                            height=bound.height;
                             closest=pt;
                         }
                     }
@@ -181,7 +184,7 @@ class Camera
             if(closest&&Params.drawRays){
                 edsLIB.drawLine(ctx,this.pos.x,this.pos.y,closest.x,closest.y,1,"white");
             }
-            view[i]=record;
+            view[i]={distance: record,height:height};
             i++;
         }
         return view;
