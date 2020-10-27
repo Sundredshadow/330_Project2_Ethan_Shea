@@ -1,3 +1,100 @@
-*{
-    margin:0;
+@font-face {
+    font-family: "myFont";
+    src: url("fonts/BarlowSemiCondensed-ThinItalic.ttf");
 }
+*{
+    color: white;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: "myFont",'Courier New', Courier, monospace;
+    display: block;
+    background-color:#293132;
+    align-content: center;
+}
+#title{
+    font-size: 40px;
+    text-align: center;
+}
+canvas{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+    color:white;
+    border:1px solid gray;
+}
+
+#controls, #basicFunctionality{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+    margin: auto;
+    align-items: center;
+    justify-content: center; 
+    border: 2px solid black;
+    padding: 1px;
+}
+
+#basicFunctionality{
+    border:none;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; 
+}
+#twoDeffects span{
+    margin:10px;
+}
+button, #trackSelect,option{
+    color:black; 
+}
+#basicFunctionality{
+    display: flex;
+    width:640px;
+    justify-content: space-evenly;
+}
+button{
+    font-size:30px;
+}
+#time{
+    font-size:30px;
+}
+#Audio{
+    display: flex;
+    justify-content: space-evenly;
+}
+#bitmapEffects,#embedded,#userAud{
+    border: 2px solid black;
+    margin-top: 1px;
+    padding:20px
+}
+#AudioEffects{
+    border: 2px solid black;
+    padding:10px;
+    margin-top:5px;
+}
+.userInput{
+    display: flex;
+    flex-direction: row;
+}
+
+#tablatureInput{
+    border: 2px solid black;
+    margin-left:175px;
+    margin-right:175px;
+}
+
+.textTab{
+    display: flex;
+    justify-content: center;
+    
+}
+.textTab input{
+    display: flex;
+    justify-content: center;
+    color:black;
+}
+
