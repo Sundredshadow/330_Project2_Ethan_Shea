@@ -1,8 +1,8 @@
 import * as edsLIB from './edsLIB.js';
 import {Params}  from './setup.js';
-import {ctx} from  "./index.js";
+import {ctx} from  "./main.js";
 //Demo for 2.5D from the coding train so a lot of the structure and code of 2.5D stuff is based on that
-//Redone to suit my needs also uses my personal library functions instead of p5.js like normalize2D etc.
+//Redone to suit my needs also uses my personal library functions instead of p5.js like normalize2D method etc.
 //https://www.youtube.com/watch?v=TOEi6T2mtHo
 //left redundant to note class
 let cutOffDistancePlaySound=350;
